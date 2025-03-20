@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mood Tracker 2050</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+<body>
+    <div class="container">
+        <header>
+          <h1>Mood Tracker</h1>
+          <div class="date-display" id="current-date">Loading...</div>
+        </header>
+    
+        <section class="mood-selector">
+          <h2>How are you feeling?</h2>
+          <div class="date-selector">
+            <label for="mood-date">Select Date:</label>
+            <input type="date" id="mood-date" name="mood-date">
+          </div>
+          <div class="mood-grid">
+            <button class="mood-btn" data-mood="😊" data-value="happy">
+              😊
+              <span>Happy</span>
+            </button>
+            <button class="mood-btn" data-mood="😃" data-value="excited">
+              😃
+              <span>Excited</span>
+            </button>
+            <button class="mood-btn" data-mood="😐" data-value="neutral">
+              😐
+              <span>Neutral</span>
+            </button>
+            <button class="mood-btn" data-mood="😔" data-value="sad">
+              😔
+              <span>Sad</span>
+            </button>
+            <button class="mood-btn" data-mood="😡" data-value="angry">
+              😡
+              <span>Angry</span>
+            </button>
+            <button class="mood-btn" data-mood="😴" data-value="tired">
+              😴
+              <span>Tired</span>
+            </button>
+            <button class="mood-btn" data-mood="🤔" data-value="thoughtful">
+              🤔
+              <span>Thoughtful</span>
+            </button>
+            <button class="mood-btn" data-mood="😎" data-value="cool">
+              😎
+              <span>Cool</span>
+            </button>
+          </div>
+          <button class="mood-btn-save" id="save-mood" disabled>
+            Save Mood
+          </button>
+        </section>
+    
+        <section class="timeline">
+          <div class="view-controls">
+            <button class="view-btn active" data-view="day">Day View</button>
+            <button class="view-btn" data-view="week">Week View</button>
+            <button class="view-btn" data-view="month">Month View</button>
+          </div>
+    
+          <div id="day-view" class="timeline-view">
+            <h2>Daily Mood Log</h2>
+            <div class="timeline-grid day-view" id="day-grid"></div>
+          </div>
+    
+          <div id="week-view" class="timeline-view" style="display: none;">
+            <h2>Weekly Overview</h2>
+            <div class="timeline-grid week-view" id="week-grid"></div>
+          </div>
+    
+          <div id="month-view" class="timeline-view" style="display: none;">
+            <h2>Monthly Overview</h2>
+            <div class="month-selector">
+              <button class="month-nav" id="prev-month">&#10094;</button>
+              <div class="month-title" id="month-title">March 2025</div>
+              <button class="month-nav" id="next-month">&#10095;</button>
+            </div>
+            <div class="calendar-header">
+              <div>Sun</div>
+              <div>Mon</div>
+              <div>Tue</div>
+              <div>Wed</div>
+              <div>Thu</div>
+              <div>Fri</div>
+              <div>Sat</div>
+            </div>
+            <div class="timeline-grid month-view" id="month-grid"></div>
+          </div>
+        </section>
+      </div>
+    
+      <div class="system-indicator"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
